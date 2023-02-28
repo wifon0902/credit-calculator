@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Informacje</title>
+    <script src="./js/informacje.js"></script>
+    <link rel="stylesheet" href="./css/informacje.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" id="logo">
+        <form id="odnosniki">
+            <input class="przyciski" type="button" onclick="location.href='kontakt.html'" value="KONTAKT">
+            <input class="przyciski" type="button" onclick="location.href='kursy.html'" value="KURSY">
+            <input class="przyciski" type="button" onclick="location.href='wspolprace.html'" value="ŹRÓDŁA">
+            <input id="aktualnyPrzycisk" type="button" onclick="location.href='informacje.html'" value="INFORMACJE">
+            <input class="przyciski" type="button" onclick="location.href='index.html'" value="KALKULATOR">
+        </form>
+    </header>
+    <article>
+        <section id="top">
+            <input type="button" class="button" value="KREDYT" onClick="pokaz_kredyt()">
+            <input type="button" class="button" value="PROWIZJA" onClick="pokaz_prowizje()">
+            <input type="button" class="button" value="OPROCENTOWANIE" onClick="pokaz_oprocentowanie()">
+            <input type="button" class="button" value="NADPŁATA" onClick="pokaz_nadplate()">
+            <input type="button" class="button" value="UBEZPIECZENIE" onClick="pokaz_ubezpieczenie()">
+        </section>
+
+        <section id="bottom">
+            <div id="definicje">
+                <p id="tekst"></p>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <span>2022 - 2023 © Wszelkie prawa zastrzeżone.</span><span>Igor Kazior 4bP</span>
+    </footer>
+</body>
+</html>

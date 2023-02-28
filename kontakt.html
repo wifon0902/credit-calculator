@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt</title>
+    <script src="./js/kontakt.js"></script>
+    <link rel="stylesheet" href="./css/kontakt.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" id="logo">
+        <form id="odnosniki">
+            <input id="aktualnyPrzycisk" type="button" onclick="location.href='kontakt.html'" value="KONTAKT">
+            <input class="przyciski" type="button" onclick="location.href='kursy.html'" value="KURSY">
+            <input class="przyciski" type="button" onclick="location.href='wspolprace.html'" value="ŹRÓDŁA">
+            <input class="przyciski" type="button" onclick="location.href='informacje.html'" value="INFORMACJE">
+            <input class="przyciski" type="button" onclick="location.href='index.html'" value="KALKULATOR">
+        </form>
+    </header>
+    <article>
+        <section id="kontakt">
+            <div id="formularz">
+                <form enctype="text/html">
+                        <p id="formularz_tekst">Formularz kontaktowy</p>
+                        <input type="text" name="imie" size="30" maxlength="40" class="pole_wyboru" id="imie" placeholder="Imię" required><br>
+                        <input type="text" name="nazwisko" size="30" maxlength="40" class="pole_wyboru" id="nazwisko" placeholder="Nazwisko" required><br>
+                        <input type="text" name="temat" size="30" maxlength="40" class="pole_wyboru" id="temat" placeholder="Temat" required><br>
+                        <textarea name="problem" rows="7" cols="99" maxlength="40" class="pole_wyboru" id="problem" required placeholder="Wiadomość"></textarea><br>
+                        <input class="wyslij" id="przeslij" type="submit" value="WYŚLIJ" onClick="wyslijMaila();">
+                        <input class="wyslij" id="reset" type="reset" value="RESET">
+                </form>
+            </div>
+        </section>
+        <section id="informacje">
+            <p id="informacje_tekst">Skontaktuj się z nami</p>
+            <div id="pytania">
+            Od teraz można wysłać do nas wiadomość prosto ze strony! Wystarczy wypełnić formularz podstawowymi danymi i podać treść wiadomości.
+            <img src="./images/email.png" class="icon1">
+            <img src="./images/phone.png" class="icon2">
+            <img src="./images/location.png" class="icon3">
+            <p class="nazwa1">EMAIL</p>
+            <p class="dane1">biuro@kaziorbank.pl</p>
+            <p class="nazwa2">TELEFON</p>
+            <p class="dane2">111 222 333</p>
+            <p class="nazwa3">ADRES</p>
+            <p class="dane3">97-500 Radomsko<br>ul. Narutowicza 12</p>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <span>2022 - 2023 © Wszelkie prawa zastrzeżone.</span><span>Igor Kazior 4bP</span>
+    </footer>
+</body>
+</html>

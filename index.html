@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator</title>
+    <script src="./js/kalkulator.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" id="logo">
+        <form id="odnosniki">
+            <input class="przyciski" type="button" onclick="location.href='kontakt.html'" value="KONTAKT">
+            <input class="przyciski" type="button" onclick="location.href='kursy.html'" value="KURSY">
+            <input class="przyciski" type="button" onclick="location.href='wspolprace.html'" value="ŹRÓDŁA">
+            <input class="przyciski" type="button" onclick="location.href='informacje.html'" value="INFORMACJE">
+            <input id="aktualnyPrzycisk" type="button" onclick="location.href='index.html'" value="KALKULATOR">
+        </form>
+    </header>
+    <article>
+        <section id="wartosci">
+            <p class="podpis">PARAMETRY KREDYTU</p>
+            <form id="kalkulator">
+                <div class="kafelek1">
+                    <label for="kwota" class="label">Kwota kredytu</label><br>
+                    <input type="number" class="inputLiczba" id="kwota" min="10000" max="300000" value="10000" step="100" oninput="range1.value=value"><br>
+                    <input type="range" class="suwak" id="range1" value="10000" min="10000" max="300000" step="100" oninput="kwota.value=value"/>
+                    <div class="minmax">
+                        <span>10 000</span><span>300 000</span>
+                      </div>
+                </div>
+
+                <div class="kafelek1">
+                    <label for="miesiac" class="label">Liczba miesięcy</label><br>
+                    <input type="number" class="inputLiczba" id="miesiac" min="12" max="360" value="12" oninput="range4.value=value"><br>
+                    <input type="range" class="suwak" id="range4" value="12" min="12" max="360" oninput="miesiac.value=value"/>
+                    <div class="minmax">
+                        <span>12</span><span>360</span>
+                      </div>
+                </div>
+
+                <div class="kafelek1">
+                    <label for="prowizja" class="label">Prowizja %</label><br>
+                    <input type="number" class="inputLiczba" id="prowizja" min="0" max="30" value="0" step="0.01" oninput="range3.value=value"><br>
+                    <input type="range" class="suwak" id="range3" value="0" min="0" max="30" step="0.01" oninput="prowizja.value=value"/>
+                    <div class="minmax">
+                        <span>0%</span><span>30%</span>
+                      </div>
+                </div>
+
+                <div class="kafelek1">
+                    <label for="oprocentowanie" class="label">Oprocentowanie %</label><br>
+                    <input type="number" class="inputLiczba" id="oprocentowanie" min="1" max="10" value="1" step="0.01" oninput="range2.value=value"><br>
+                    <input type="range" class="suwak" id="range2" value="1" min="1" max="10" step="0.01" oninput="oprocentowanie.value=value"/>
+                    <div class="minmax">
+                        <span>1%</span><span>10%</span>
+                      </div>
+                </div>
+
+                <div class="kafelek2">
+                    <div class="przycisk">
+                        <div>
+                            <label>
+                                <input type="checkbox" id="ubezpieczenie" name="ubezpieczenie">
+                                <span>Ubezpieczenie</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kafelek2">
+                    <label for="waluta" class="label">Waluta</label><br>
+                    <select id="waluta" class="waluta">
+                        <option value="PLN">PLN</option>
+                        <option value="EUR">EUR</option>
+                        <option value="USD">USD</option>
+                        <option value="GBP">GBP</option>
+                        <option value="CHF">CHF</option>
+                    </select>
+                </div>
+
+                <div class="kafelek3">
+                    <label for="nadplata" class="label">Kwota nadpłaty</label><br>
+                    <input type="number" class="inputLiczba" id="nadplata" name="nadplata" min="0" max="300000" value="0">
+                </div>
+
+                <input type="button" value="Oblicz" onClick="oblicz();">
+            </form>
+        </section>
+        
+        <section id="wynik">
+            <p class="podpis">WYNIK KALKULACJI</p>
+            <div id="wyniki">
+                <div class="kafelek4">
+                    <label for="rata" class="label">Rata miesięczna</label><br>
+                    <input type="text" class="output" name="rata" id="rata" readonly>
+                </div>
+
+                <div class="kafelek4">
+                    <label for="koszt" class="label">Koszt kredytu</label><br>
+                    <input type="text" class="output" name="koszt" id="koszt" readonly>
+                </div>
+
+                <div class="kafelek4">
+                    <label for="calkowita" class="label">Całkowita kwota spłaty</label><br>
+                    <input type="text" class="output" name="calkowita" id="calkowita" readonly>
+                </div>
+                <p id="error"></p>
+
+            </div>
+        </section>
+    </article>
+    <footer>
+        <span>2022 - 2023 © Wszelkie prawa zastrzeżone.</span><span>Igor Kazior 4bP</span>
+    </footer>
+</body>
+</html>
